@@ -6,20 +6,20 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  title: '阅读3服务器版',
+  tagline: '桌面端、iOS可用',
+  favicon: 'img/legado.jpg',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'http://docs.legado-3-server-version.suto.eu.org/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'Suto-Commune', // Usually your GitHub org/user name.
+  projectName: 'Docs4Legado', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -28,8 +28,8 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'],
   },
 
   presets: [
@@ -42,14 +42,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Suto-Commune/Docs4Legado/tree/main/',
         },
         blog: {
-          showReadingTime: true,
+          showReadingTime: false,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Suto-Commune/Docs4Legado/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -61,25 +61,33 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: '主页',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: '阅读3服务端',
+          src: 'img/legado.jpg',
         },
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            sidebarId: 'tutorial',
+            label: '文档',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'api',
+            label: 'API文档',
+          },
+          {
+            href: 'https://github.com/Suto-Commune/Docs4Legado',
+            label: '文档项目地址',
+            position: 'right',
+          },
+          {
+            href: 'https://github.com/hectorqin/reader',
+            label: '项目地址',
             position: 'right',
           },
         ],
@@ -88,7 +96,7 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: '文档',
             items: [
               {
                 label: 'Tutorial',
@@ -97,19 +105,15 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            title: '联系方式',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Telegram',
+                href: 'https://t.me/+pQ8HDlANPZ84ZWNl',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: '微信公众号',
+                href: 'http://weixin.qq.com/r/onXx6X3EbiARrTmK9yCw',
               },
             ],
           },
@@ -117,17 +121,17 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: '文档项目地址',
+                href: 'https://github.com/facebook/docusaurus',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: '项目地址',
+                href: 'https://github.com/hectorqin/reader',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Suto-Commune, Inc. Built with Docusaurus.<br/>转载请遵循CC 3.0协议<br/>文档内所提到的软件均为hectorqin所创作<br/>本站与阅读3（安卓版）没有从属关系。`,
       },
       prism: {
         theme: lightCodeTheme,
