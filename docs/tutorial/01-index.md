@@ -2,6 +2,12 @@
 title: 阅读3服务端 介绍
 ---
 
+import TOCInline from '@theme/TOCInline';
+
+<TOCInline toc={toc} />
+
+---
+
 # reader
 
 阅读3服务器版，不需要手机。
